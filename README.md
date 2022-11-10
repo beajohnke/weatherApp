@@ -1,4 +1,4 @@
-# ⚠️ Página de Clima Tempo
+# ☁️ Página de Clima Tempo
 
 > Página de Clima Tempo fictícia feita para estudos e aprimoramento das habilidades de Front-End. 
 
