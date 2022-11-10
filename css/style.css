@@ -1,1 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+/* ===== BASE ===== */
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2C236D;
+}
+
+.container {
+    width: 400px;
+    height: 100px; /*105 - 600*/
+    padding: 28px 32px;
+    
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: #0C0921;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    
+    transition: .6s ease-out;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== SEARCH BOX INPUT STYLE ===== */
+.search-box input {
+    position: relative;
+    width: 80%;
+    margin-left: 10px;
+
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.search-box input::placeholder {
+    position: absolute;
+    top: 6px;
+    font-size: 18px;
+    text-transform: none;
+}
+
+.search-box button {
+    width: 35px;
+    height: 35px;
+
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #8774F7;
+}
+
+.search-box i {
+    font-size: 14px;
+}
+
+.fa-spinner {
+    text-align: center;
+    animation: rotate 1.5s linear infinite;   
+}
+
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+/* ===== WEATHER DATA STYLE ===== */
+.weather-data {
+    margin-top: 30px;
+    flex-direction: column;
+
+    font-size: 20px;
+}
+
+.daytime-img {
+    width: 80%;
+    height: 185px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.city-location {
+    margin-top: 22px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.city-location i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.city-temperature {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.climate-conditions {
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.weather-factors {
+    margin-top: 15px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.factors-text {
+    margin: 6px 0;
+    color: #b6b5b5;
+    font-size: 15px;
+}
+
+/* ===== ERROR MESSAGE ===== */
+.error-message {
+    margin-top: 30px;
+    padding: 15px;
+
+    background-color: #8774F7;
+    border-radius: 8px;
+
+    text-align: center;
+    line-height: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 450px) {
+    .container {
+        width: 350px;
+    }
+    
+    .daytime-img {
+        height: 130px;
+    }
+
+    .city-temperature {
+        width: 50%;
+        flex-wrap: wrap;
+    }
+
+    .climate-conditions {
+        margin-left: 0;
+    }
+}
