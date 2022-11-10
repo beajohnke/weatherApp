@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Tempo - Atual</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    
+    <section class="container">
+
+        <section class="search-box center">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="city-input" placeholder="Digite sua cidade">
+            <button class="center" id="btn-input">
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            </button>
+        </section> 
+
+        <div class="error-message hide">
+            <p>Não foi possível localizar a cidade inserida. Por favor, tente novamente.</p>
+        </div>
+
+        <section class="weather-data center">
+            
+            <div class="daytime-img center"></div>
+
+            <div class="city-location center">
+                <p>
+                    <i class="fa-solid fa-thumbtack"></i>
+                    <span id="city"></span>
+                    <span id="date"></span>
+                </p>
+            </div>
+
+            <div class="city-temperature center">
+                <p>
+                    <span id="temperature"></span>
+                </p>
+                <p class="ceusius">&deg;C</p>
+
+                <div class="climate-conditions center">
+                    <img id="weather-icon" src="" alt="Condições atuais">
+                    <p id="conditions"></p>
+                </div>
+            
+            </div>
+
+            <div class="weather-factors center">
+                <p class="factors-text">
+                    Umidade:
+                    <span id="humidity"></span>%
+                </p>
+                <p class="factors-text">
+                    Vento:
+                    <span id="wind"></span>
+                    km/h
+                </p>
+                <p class="factors-text">
+                    Sensação Térmica: 
+                    <span id="feels-like"></span>
+                    &deg;C
+                </p>
+            </div>
+            
+        </section>
+    </section>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
